@@ -1,0 +1,20 @@
+{
+  "todos": [
+    {
+      "id": "7fa3",
+      "task": "Todo 1"
+    },
+    {
+      "id": "5594",
+      "task": "Do something man"
+    },
+    {
+      "id": "8610",
+      "task": "I think this will work just fine if things don't go bad"
+    },
+    {
+      "id": "e22f",
+      "task": "so far so good idk"
+    }
+  ]
+}
