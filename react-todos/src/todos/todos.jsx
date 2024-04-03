@@ -8,24 +8,21 @@ import axios from '../config/axios.client';
 async function getTodos() {
     let result = await axios.get('todos');
     return result.data;
-
 }
 
 function Todos(params) {
     var [todos, setTodo] = useState([]);
 
-    const onTodoSubmitted = useCallback(() => {
-        console.log("Woadsfoiads");
-        getTodos().then((data) => setTodo(data));
+    const onTodoSubmitted = useCallback(async () => {
+        // getTodos().then((data) => setTodo(data));
+        setTodo(await getTodos());
     }, []);
 
     useEffect(() => {
         getTodos().then((data) => setTodo(data));
-
         return () => setTodo([]); // Cleanup after detachment, demount
     }, []);
-
-
+    
     return (
         <>
             <TodoForm onSubmit={onTodoSubmitted} />
